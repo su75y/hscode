@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Multi-Tools Hub</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="../css/style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header will be dynamically loaded here -->
+    <div id="header-placeholder"></div>
+
+    <main class="container my-5">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="mb-4">Admin Dashboard</h1>
+                <div class="alert alert-info">
+                    <strong>Note:</strong> Only Excel files (.xlsx) with two columns (HS Code and Description) are accepted.
+                </div>
+            </div>
+        </div>
+
+        <!-- Excel Upload Section -->
+        <div class="row mb-5">
+            <div class="col-md-8 mx-auto">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Update HS Codes Database</h5>
+                        <form id="excelUploadForm">
+                            <div class="mb-3">
+                                <label for="excelFile" class="form-label">Select Excel File</label>
+                                <input type="file" class="form-control" id="excelFile" accept=".xlsx" required>
+                                <div class="form-text">The Excel file should have two columns: HS Code and Description</div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Upload and Update Database</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Current Database Preview -->
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Current Database Preview</h5>
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>HS Code</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="databasePreview">
+                                    <!-- Database preview will be loaded here -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer will be dynamically loaded here -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../js/main.js"></script>
+    <script src="js/admin-dashboard.js"></script>
+</body>
+</html> 
